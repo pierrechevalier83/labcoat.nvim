@@ -103,9 +103,9 @@ return function(options)
         emphasized_fg,
         secondary_bg,
         secondary_fg,
-	primary_accent,
-	primary_bright_accent,
-	secondary_accent,
-	secondary_bright_accent
+        primary_accent,
+        primary_bright_accent,
+        secondary_accent,
+        secondary_bright_accent,
     }
 end
