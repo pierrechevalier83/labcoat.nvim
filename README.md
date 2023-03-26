@@ -4,7 +4,7 @@ A [labcoat](https://www.labcoattheme.com/)-esque colorscheme.
 
 labcoat.nvim supports highlighting for [Treesitter](https://github.com/nvim-treesitter/nvim-treesitter),
 [Neovim LSP](https://neovim.io/doc/user/lsp.html), [Telescope](https://github.com/nvim-telescope/telescope.nvim/),
-and [much more](https://github.com/andersevenrud/labcoat.nvim/tree/main/lua/labcoat/colors).
+and [much more](https://github.com/pierrechevalier83/labcoat.nvim/tree/main/lua/labcoat/colors).
 
 ![Color Preview](https://user-images.githubusercontent.com/42545625/112913430-935a6a80-90c7-11eb-867e-394b1790a14f.png)
 
@@ -24,7 +24,7 @@ to install, enable and configure this colorscheme:
 
 ```lua
 use {
-    'andersevenrud/labcoat.nvim',
+    'pierrechevalier83/labcoat.nvim',
     config = function()
         -- The table used in this example contains the default settings.
         -- Modify or remove these to your liking (this also applies to alternatives below):
@@ -63,7 +63,7 @@ use {
 For example [`vim-plug`](https://github.com/junegunn/vim-plug):
 
 ```vim
-Plug 'andersevenrud/labcoat.nvim'
+Plug 'pierrechevalier83/labcoat.nvim'
 ```
 
 #### Using Lua
@@ -105,4 +105,4 @@ colorscheme labcoat
 ## Notes
 
 Certain plugin highlights are configured manually with Lua tables. This colorscheme comes with some
-[pre-made configurations](https://github.com/andersevenrud/labcoat.nvim/tree/main/lua/labcoat/configs) and instructions.
+[pre-made configurations](https://github.com/pierrechevalier83/labcoat.nvim/tree/main/lua/labcoat/configs) and instructions.

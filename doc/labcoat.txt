@@ -32,7 +32,7 @@ WITH PACKER.NVIM                                                   *labcoat-pack
 `packer.nvim` provides an easy way to install, enable and configure this colorscheme:
 >
     use {
-        'andersevenrud/labcoat.nvim',
+        'pierrechevalier83/labcoat.nvim',
         config = function()
             -- The table used in this example contains the default settings.
             -- Modify or remove these to your liking (this also applies to alternatives below):
@@ -70,7 +70,7 @@ ALTERNATIVES                                                 *labcoat-alternativ
 
 For example `vim-plug`:
 >
-    Plug 'andersevenrud/labcoat.nvim'
+    Plug 'pierrechevalier83/labcoat.nvim'
 <
 
 USING LUA                                                *labcoat-alternatives-lua*
