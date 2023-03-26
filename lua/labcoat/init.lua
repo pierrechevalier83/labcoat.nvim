@@ -12,7 +12,7 @@ local default_opts = {
         return {}
     end,
     custom_palette = function()
-	return { palette }
+        return { palette }
     end,
 }
 
