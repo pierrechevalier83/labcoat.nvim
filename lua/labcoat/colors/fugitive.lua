@@ -3,6 +3,6 @@ return function(c)
     return {
         { 'gitcommitDiscardedFile', c.red },
         { 'gitcommitUntrackedFile', c.red },
-        { 'gitcommitSelectedFile', c.purple },
+        { 'gitcommitSelectedFile', c.violet },
     }
 end

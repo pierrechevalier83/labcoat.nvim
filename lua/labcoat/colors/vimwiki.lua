@@ -1,8 +1,8 @@
 -- 'vimwiki/vimwiki'
 return function(c)
     return {
-        { 'VimwikiHeader1', c.bright_cyan },
-        { 'VimwikiHeader2', c.blue },
-        { 'VimwikiHeader3', c.purple },
+        { 'VimwikiHeader1', c.bright_primary_accent },
+        { 'VimwikiHeader2', c.secondary_accent },
+        { 'VimwikiHeader3', c.violet },
     }
 end

@@ -1,11 +1,11 @@
 -- 'sindrets/winshift.nvim'
 return function(c, s)
     return {
-        { { 'WinShiftNormal', 'WinShiftEndOfBuffer' }, c.none, c.dark_black_alt },
-        { 'WinShiftLineNr', c.yellow, c.dark_black_alt },
-        { 'WinShiftCursorLineNr', c.yellow, c.dark_black_alt, s.bold },
-        { 'WinShiftSignColumn', c.cyan, c.dark_black_alt },
-        { 'WinShiftWindowPicker', c.purple, c.blue, s.bold },
-        { 'WinShiftFoldColumn', c.cyan, c.dark_black_alt },
+        { { 'WinShiftNormal', 'WinShiftEndOfBuffer' }, c.none, c.primary_bg },
+        { 'WinShiftLineNr', c.yellow, c.primary_bg },
+        { 'WinShiftCursorLineNr', c.yellow, c.primary_bg, s.bold },
+        { 'WinShiftSignColumn', c.primary_accent, c.primary_bg },
+        { 'WinShiftWindowPicker', c.violet, c.secondary_accent, s.bold },
+        { 'WinShiftFoldColumn', c.primary_accent, c.primary_bg },
     }
 end

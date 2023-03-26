@@ -28,7 +28,6 @@ return function(c, s, cs)
                 {
                     'HightlightName6',
                     c.red,
-                    cs.bg('plugin_name'), -- Alternate or default background based on user configuration
                     cs.underline,
                 },
             }

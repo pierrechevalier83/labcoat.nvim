@@ -1,9 +1,9 @@
 -- 'glepnir/dashboard-nvim'
 return function(c)
     return {
-        { 'DashboardHeader', c.purple },
-        { 'DashboardCenter', c.dark_white },
-        { 'DashboardShortCut', c.blue },
-        { 'DashboardFooter', c.gray },
+        { 'DashboardHeader', c.violet },
+        { 'DashboardCenter', c.primary_fg },
+        { 'DashboardShortCut', c.secondary_accent },
+        { 'DashboardFooter', c.secondary_fg },
     }
 end

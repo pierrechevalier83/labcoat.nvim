@@ -1,7 +1,7 @@
 -- 'wbthomason/packer.nvim'
 return function(c)
     return {
-        { 'packerHash', c.grayish, c.none },
+        { 'packerHash', c.secondary_fg, c.none },
         { 'packerStatusSuccess', c.green, c.none },
     }
 end

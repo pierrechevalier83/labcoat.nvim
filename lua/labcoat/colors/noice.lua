@@ -1,5 +1,5 @@
 -- 'folke/noice.nvim'
-return function(c, s, cs)
+return function(c, s)
     return {
         { 'NoiceLspProgressClient', c.green },
         { 'NoiceLspProgressTitle', c.white },

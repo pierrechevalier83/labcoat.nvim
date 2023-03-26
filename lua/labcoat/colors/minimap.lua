@@ -1,8 +1,8 @@
 -- 'wfxr/minimap.vim'
 return function(c)
     return {
-        { 'minimapCursor', c.blue, c.none },
-        { 'minimapRange', c.blue, c.none },
+        { 'minimapCursor', c.secondary_accent, c.none },
+        { 'minimapRange', c.secondary_accent, c.none },
         { 'minimapDiffAdded', c.green, c.none },
         { 'minimapDiffLine', c.yellow, c.none },
         { 'minimapDiffRemoved', c.red, c.none },

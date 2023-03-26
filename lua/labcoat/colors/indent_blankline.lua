@@ -1,9 +1,9 @@
 -- lukas-reineke/indent-blankline.nvim
 return function(c)
     return {
-        { 'IndentBlanklineChar', c.gray },
-        { 'IndentBlanklineSpaceChar', c.gray },
-        { 'IndentBlanklineSpaceCharBlankline', c.dark_white },
+        { 'IndentBlanklineChar', c.secondary_fg },
+        { 'IndentBlanklineSpaceChar', c.secondary_fg },
+        { 'IndentBlanklineSpaceCharBlankline', c.primary_fg },
         { 'IndentBlanklineContextChar', c.black },
     }
 end

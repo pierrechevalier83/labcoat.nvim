@@ -1,11 +1,11 @@
 -- 'folke/whick-key-nvim'
-return function(c, s, cs)
+return function(c, s)
     return {
-        { 'WhichKey', c.bright_cyan },
-        { 'WhichKeyGroup', c.blue },
-        { 'WhichKeySeparator', c.grayish },
-        { 'WhichKeyDesc', c.dark_white },
-        { 'WhichKeyFloat', c.none, cs.bg('whichkey') },
-        { 'WhichKeyValue', c.dark_white },
+        { 'WhichKey', c.bright_primary_accent },
+        { 'WhichKeyGroup', c.secondary_accent },
+        { 'WhichKeySeparator', c.secondary_fg },
+        { 'WhichKeyDesc', c.primary_fg },
+        { 'WhichKeyFloat', c.none, cs.primary_bg },
+        { 'WhichKeyValue', c.primary_fg },
     }
 end

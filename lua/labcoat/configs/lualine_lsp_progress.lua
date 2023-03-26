@@ -19,5 +19,5 @@ return {
     title = palette.white,
     message = palette.white,
     spinner = palette.white,
-    lsp_client_name = palette.bright_cyan,
+    lsp_client_name = palette.bright_primary_accent,
 }
