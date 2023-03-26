@@ -125,6 +125,8 @@ function M.destroy()
 end
 
 function M.colorscheme(config)
+    local options = create_options(config)
+    local palette = palette(options)
     vim.o.termguicolors = true
     vim.g.colors_name = 'labcoat'
     vim.g.terminal_color_0 = palette.black
