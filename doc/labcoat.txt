@@ -1,0 +1,117 @@
+*labcoat*
+
+A labcoat-esque colorscheme.
+
+labcoat.nvim supports highlighting for Treesitter, Neovim LSP, Telescope, and much more.
+
+================================================================================
+CONTENTS                                                         *labcoat-contents*
+
+1. Introduction...........................................................|labcoat|
+2. Requirements..............................................|labcoat-requirements|
+3. Usage............................................................|labcoat-usage|
+    3.1. With packer.nvim..........................................|labcoat-packer|
+    3.2. Alternatives........................................|labcoat-alternatives|
+        3.2.1. Using Lua.................................|labcoat-alternatives-lua|
+        3.2.2. Using Vimscript.....................|labcoat-alternatives-vimscript|
+4. Notes............................................................|labcoat-notes|
+
+================================================================================
+REQUIREMENTS                                                 *labcoat-requirements*
+
+*   Neovim 0.5+
+
+================================================================================
+USAGE                                                               *labcoat-usage*
+
+labcoat.nvim can be installed using any package manager and configuration language
+of choice.
+
+WITH PACKER.NVIM                                                   *labcoat-packer*
+
+`packer.nvim` provides an easy way to install, enable and configure this colorscheme:
+>
+    use {
+        'andersevenrud/labcoat.nvim',
+        config = function()
+            -- The table used in this example contains the default settings.
+            -- Modify or remove these to your liking (this also applies to alternatives below):
+            require('labcoat').colorscheme({
+                -- Underline style used for spelling
+                -- Options: 'none', 'underline', 'undercurl'
+                underline_option = 'none',
+
+                -- Italics for certain keywords such as constructors, functions,
+                -- labels and namespaces
+                italic = true,
+
+                -- Italic styled comments
+                italic_comments = false,
+
+                -- Minimal mode: different choice of colors for Tabs and StatusLine
+                minimal_mode = false,
+
+                -- Darker backgrounds for certain sidebars, popups, etc.
+                -- Options: true, false, or a table of explicit names
+                -- Supported: terminal, qf, vista_kind, packer, nvim-tree, telescope, whichkey
+                alternate_backgrounds = false,
+
+                -- Callback function to define custom color groups
+                -- See 'lua/labcoat/colors/example.lua' for example defitions
+                custom_colors = function(c, s, cs)
+                  return {}
+                end
+            })
+        end
+    }
+<
+
+ALTERNATIVES                                                 *labcoat-alternatives*
+
+For example `vim-plug`:
+>
+    Plug 'andersevenrud/labcoat.nvim'
+<
+
+USING LUA                                                *labcoat-alternatives-lua*
+
+Via the labcoat.nvim module:
+>
+    require('labcoat').colorscheme({
+        underline_option = 'none',
+        italic = true,
+        italic_comments = false,
+        minimal_mode = false,
+        alternate_backgrounds = false
+    })
+<
+
+or via vim globals:
+>
+    vim.g.labcoat_underline_option = 'none'
+    vim.g.labcoat_italic = true
+    vim.g.labcoat_italic_comments = false
+    vim.g.labcoat_minimal_mode = false
+    vim.g.labcoat_alternate_backgrounds = false
+    vim.cmd('colorscheme labcoat')
+<
+
+USING VIMSCRIPT                                     *labcoat-alternatives-vimscript*
+>
+    let g:labcoat_underline_option = 'none'
+    let g:labcoat_italic = v:true
+    let g:labcoat_italic_comments = v:false
+    let g:labcoat_minimal_mode = v:false
+    let g:labcoat_alternate_backgrounds = v:false
+    colorscheme labcoat
+<
+
+================================================================================
+NOTES                                                               *labcoat-notes*
+
+Certain plugin highlights are configured manually with Lua tables. This colorscheme
+comes with some pre-made configurations (lua/labcoat/configs) and instructions.
+
+================================================================================
+
+vim:tw=78:ts=8:ft=help:norl:

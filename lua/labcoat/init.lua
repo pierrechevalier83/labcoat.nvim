@@ -1,5 +1,5 @@
-local palette = require('nordic.palette')
-local load_colors = require('nordic.colors')
+local palette = require('labcoat.palette')
+local load_colors = require('labcoat.colors')
 local vim = vim
 local M = {}
 
@@ -48,7 +48,7 @@ local function create_options(config)
 
     for k in pairs(default_opts) do
         module_opts[k] = config[k]
-        global_opts[k] = vim.g['nord_' .. k]
+        global_opts[k] = vim.g['labcoat_' .. k]
     end
 
     return vim.tbl_extend('force', default_opts, global_opts, module_opts)
@@ -142,9 +142,9 @@ local function initialize(config)
     local function load_autocommands()
         local setlocal = 'setlocal winhighlight=Normal:NormalAlt,SignColumn:SignColumnAlt'
 
-        vim.cmd('augroup nordic')
+        vim.cmd('augroup labcoat')
         vim.cmd('autocmd!')
-        vim.cmd([[autocmd ColorScheme * lua require('nordic').destroy()]])
+        vim.cmd([[autocmd ColorScheme * lua require('labcoat').destroy()]])
 
         for _, name in ipairs(alternatives.buffers) do
             if name == 'terminal' then
@@ -162,15 +162,15 @@ local function initialize(config)
 end
 
 function M.destroy()
-    if vim.g.colors_name ~= 'nordic' then
-        vim.cmd('autocmd! nordic')
-        vim.cmd('augroup! nordic')
+    if vim.g.colors_name ~= 'labcoat' then
+        vim.cmd('autocmd! labcoat')
+        vim.cmd('augroup! labcoat')
     end
 end
 
 function M.colorscheme(config)
     vim.o.termguicolors = true
-    vim.g.colors_name = 'nordic'
+    vim.g.colors_name = 'labcoat'
     vim.g.terminal_color_0 = palette.black
     vim.g.terminal_color_1 = palette.red
     vim.g.terminal_color_2 = palette.green

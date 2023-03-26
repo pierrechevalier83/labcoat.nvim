@@ -1,4 +1,4 @@
-local palette = require('nordic.palette')
+local palette = require('labcoat.palette')
 
 -- arkav/lualine-lsp-progress
 -- usage:
@@ -8,7 +8,7 @@ local palette = require('nordic.palette')
 --             lualine_c = {
 --                 ...,
 --                 { 'lsp_progress',
---                     colors = require('nordic.configs.lualine_lsp_progress')
+--                     colors = require('labcoat.configs.lualine_lsp_progress')
 --                 }
 --             }
 --         }

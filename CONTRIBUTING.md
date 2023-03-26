@@ -17,7 +17,7 @@ This project uses the [conventional commits](https://conventionalcommits.org/) s
 
 ## Adding color definitions
 
-In the `lua/nordic/colors/` directory:
+In the `lua/labcoat/colors/` directory:
 
 1. Create a new file for your definitions, i.e. `project_name.lua` with the following template (see `example.lua` for example definitions):
 ```lua
@@ -42,7 +42,7 @@ Commit the changes with the message `feat: support project-name` into your fork 
 This colorscheme provides a user-configurable option to enable alternative background colors
 on certain UI elements like special buffers and popups, etc.
 
-The `lua/nordic/init.lua` file contains two tables to define where this should apply:
+The `lua/labcoat/init.lua` file contains two tables to define where this should apply:
 
 * `alternate_buffers_supported`: A buffer filename
 * `alternate_highlights_supported`: A plugin name used in color definitions via `cs.bg('project_name')`

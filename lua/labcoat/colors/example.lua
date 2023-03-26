@@ -1,4 +1,4 @@
--- andersevenrud/nordic.nvim
+-- andersevenrud/labcoat.nvim
 return function(c, s, cs)
     -- c: color palette table
     --  see the palette file for available entries

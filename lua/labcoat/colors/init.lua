@@ -35,6 +35,6 @@ local colors = {
 
 return function()
     return vim.tbl_map(function(v)
-        return require('nordic.colors.' .. v)
+        return require('labcoat.colors.' .. v)
     end, colors)
 end
