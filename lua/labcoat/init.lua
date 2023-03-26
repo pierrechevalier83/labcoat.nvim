@@ -104,7 +104,6 @@ local function initialize(config)
 
     -- Thanks https://github.com/folke/tokyonight.nvim
     local function load_autocommands()
-
         vim.cmd('augroup labcoat')
         vim.cmd('autocmd!')
         vim.cmd([[autocmd ColorScheme * lua require('labcoat').destroy()]])
@@ -125,25 +124,25 @@ end
 
 function M.colorscheme(config)
     local options = create_options(config)
-    local palette = palette(options)
+    local p = palette(options)
     vim.o.termguicolors = true
     vim.g.colors_name = 'labcoat'
-    vim.g.terminal_color_0 = palette.black
-    vim.g.terminal_color_1 = palette.red
-    vim.g.terminal_color_2 = palette.green
-    vim.g.terminal_color_3 = palette.yellow
-    vim.g.terminal_color_4 = palette.blue
-    vim.g.terminal_color_5 = palette.violet
-    vim.g.terminal_color_6 = palette.cyan
-    vim.g.terminal_color_7 = palette.white
-    vim.g.terminal_color_8 = palette.bright_black
-    vim.g.terminal_color_9 = palette.bright_red
-    vim.g.terminal_color_10 = palette.bright_green
-    vim.g.terminal_color_11 = palette.bright_yellow
-    vim.g.terminal_color_12 = palette.bright_blue
-    vim.g.terminal_color_13 = palette.bright_violet
-    vim.g.terminal_color_14 = palette.bright_cyan
-    vim.g.terminal_color_15 = palette.bright_white
+    vim.g.terminal_color_0 = p.black
+    vim.g.terminal_color_1 = p.red
+    vim.g.terminal_color_2 = p.green
+    vim.g.terminal_color_3 = p.yellow
+    vim.g.terminal_color_4 = p.blue
+    vim.g.terminal_color_5 = p.violet
+    vim.g.terminal_color_6 = p.cyan
+    vim.g.terminal_color_7 = p.white
+    vim.g.terminal_color_8 = p.bright_black
+    vim.g.terminal_color_9 = p.bright_red
+    vim.g.terminal_color_10 = p.bright_green
+    vim.g.terminal_color_11 = p.bright_yellow
+    vim.g.terminal_color_12 = p.bright_blue
+    vim.g.terminal_color_13 = p.bright_violet
+    vim.g.terminal_color_14 = p.bright_cyan
+    vim.g.terminal_color_15 = p.bright_white
 
     initialize(config or {})
 end
