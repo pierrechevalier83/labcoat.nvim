@@ -26,47 +26,58 @@ return function(options)
     local bright_yellow = options.bright_yellow or '#eaaf31'
     local bright_green = options.bright_green or '#b7c032'
     local bright_cyan = options.bright_cyan or '#47ccc1'
+    -- locals
+    local primary_bg
+    local primary_fg
+    local emphasized_bg
+    local emphasized_fg
+    local secondary_bg
+    local secondary_fg
+    local black
+    local bright_black
+    local white
+    local bright_white
     -- Base configuration
     if options.dark_theme == true or options.dark_theme == nil then
         if options.high_contrast == true or options.high_contrast == nil then
             -- High contrast, Dark theme
-            local primary_bg = base03
-            local primary_fg = base0
-            local emphasized_bg = base02
-            local emphasized_fg = base1
+            primary_bg = base03
+            primary_fg = base0
+            emphasized_bg = base02
+            emphasized_fg = base1
         else
             -- Low contrast, Dark theme
-            local primary_bg = base02
-            local primary_fg = base1
-            local emphasized_bg = base03
-            local emphasized_fg = base0
+            primary_bg = base02
+            primary_fg = base1
+            emphasized_bg = base03
+            emphasized_fg = base0
         end
-        local secondary_bg = base00
-        local secondary_fg = base01
-        local black = base00
-        local bright_black = base01
-        local white = base2
-        local bright_white = base3
+        secondary_bg = base00
+        secondary_fg = base01
+        black = base00
+        bright_black = base01
+        white = base2
+        bright_white = base3
     else
         if options.high_contrast == true then
             -- High contrast, Light theme
-            local primary_bg = base3
-            local primary_fg = base00
-            local emphasized_bg = base2
-            local emphasized_fg = base01
+            primary_bg = base3
+            primary_fg = base00
+            emphasized_bg = base2
+            emphasized_fg = base01
         else
             -- Low contrast, Light theme
-            local primary_bg = base2
-            local primary_fg = base01
-            local emphasized_bg = base3
-            local emphasized_fg = base00
+            primary_bg = base2
+            primary_fg = base01
+            emphasized_bg = base3
+            emphasized_fg = base00
         end
-        local secondary_bg = base0
-        local secondary_fg = base1
-        local black = base02
-        local bright_black = base03
-        local white = base0
-        local bright_white = base1
+        secondary_bg = base0
+        secondary_fg = base1
+        black = base02
+        bright_black = base03
+        white = base0
+        bright_white = base1
     end
     -- Accent configuration
     local primary_accent = options.primary_accent or cyan

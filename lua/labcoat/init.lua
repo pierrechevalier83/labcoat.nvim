@@ -104,7 +104,6 @@ local function initialize(config)
 
     -- Thanks https://github.com/folke/tokyonight.nvim
     local function load_autocommands()
-        local setlocal = 'setlocal winhighlight=Normal:NormalAlt,SignColumn:SignColumnAlt'
 
         vim.cmd('augroup labcoat')
         vim.cmd('autocmd!')
