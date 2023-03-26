@@ -8,12 +8,36 @@ local default_opts = {
     italic = true,
     italic_comments = false,
     minimal_mode = false,
-    custom_colors = function()
-        return {}
-    end,
-    custom_palette = function()
-        return { palette }
-    end,
+    dark_theme = true,
+    high_contrast = true,
+    primary_accent = 'cyan',
+    primary_bright_accent = 'bright_cyan',
+    secondary_accent = 'blue',
+    secondary_bright_accent = 'bright_blue',
+    base03 = '#002a35',
+    base02 = '#083540',
+    base01 = '#49707c',
+    base00 = '#567d89',
+    base0 = '#8b8372',
+    base1 = '#98907f',
+    base2 = '#f0e7d5',
+    base3 = '#fff6e3',
+    blue = '#3a89b8',
+    violet = '#6a74a9',
+    magenta = '#b7577f',
+    red = '#c35446',
+    orange = '#b85e39',
+    yellow = '#b18a44',
+    green = '#929546',
+    cyan = '#569c96',
+    bright_blue = '#19b5ff',
+    bright_violet = '#8399f2',
+    bright_magenta = '#ff61ab',
+    bright_red = '#ff5a4b',
+    bright_orange = '#ff6f32',
+    bright_yellow = '#eaaf31',
+    bright_green = '#b7c032',
+    bright_cyan = '#47ccc1',
 }
 
 local style_names = {
