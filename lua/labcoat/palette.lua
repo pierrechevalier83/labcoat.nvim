@@ -113,9 +113,34 @@ return function(options)
         primary_accent = cyan
         primary_bright_accent = bright_cyan
     end
-    -- TODO
-    secondary_accent = blue
-    secondary_bright_accent = bright_blue
+    if options.secondary_accent == 'blue' then
+        secondary_accent = blue
+        secondary_bright_accent = bright_blue
+    elseif options.secondary_accent == 'violet' then
+        secondary_accent = violet
+        secondary_bright_accent = bright_violet
+    elseif options.secondary_accent == 'magenta' then
+        secondary_accent = magenta
+        secondary_bright_accent = bright_magenta
+    elseif options.secondary_accent == 'red' then
+        secondary_accent = red
+        secondary_bright_accent = bright_red
+    elseif options.secondary_accent == 'orange' then
+        secondary_accent = orange
+        secondary_bright_accent = bright_orange
+    elseif options.secondary_accent == 'yellow' then
+        secondary_accent = yellow
+        secondary_bright_accent = bright_yellow
+    elseif options.secondary_accent == 'green' then
+        secondary_accent = green
+        secondary_bright_accent = bright_green
+    elseif options.secondary_accent == 'cyan' then
+        secondary_accent = cyan
+        secondary_bright_accent = bright_cyan
+    else
+        secondary_accent = cyan
+        secondary_bright_accent = bright_cyan
+    end
     return {
         -- colors
         blue = blue,
