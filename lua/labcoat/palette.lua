@@ -16,7 +16,7 @@ return function(options)
     local orange = options.orange or '#b85e39'
     local yellow = options.yellow or '#b18a44'
     local green = options.green or '#929546'
-    local cyan = options.cyan or '569c96'
+    local cyan = options.cyan or '#569c96'
     -- Bright accent colors
     local bright_blue = options.bright_blue or '#19b5ff'
     local bright_violet = options.bright_violet or '#8399f2'
