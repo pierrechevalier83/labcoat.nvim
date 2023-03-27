@@ -137,6 +137,7 @@ local function initialize(config)
 
     load_group(groups)
     load_autocommands()
+    return { palette }
 end
 
 function M.destroy()
@@ -147,8 +148,7 @@ function M.destroy()
 end
 
 function M.colorscheme(config)
-    local options = create_options(config)
-    local palette = load_palette(options)
+    local palette = initialize(config or {})
     vim.o.termguicolors = true
     vim.g.colors_name = 'labcoat'
     vim.g.terminal_color_0 = palette.black
@@ -167,8 +167,6 @@ function M.colorscheme(config)
     vim.g.terminal_color_13 = palette.bright_violet
     vim.g.terminal_color_14 = palette.bright_cyan
     vim.g.terminal_color_15 = palette.bright_white
-
-    initialize(config or {})
 end
 
 return M
