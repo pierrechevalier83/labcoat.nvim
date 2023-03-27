@@ -1,6 +1,5 @@
 local load_palette = require('labcoat.palette')
 local load_colors = require('labcoat.colors')
-local palette
 local vim = vim
 local M = {}
 
@@ -68,7 +67,7 @@ local function create_options(config)
     return vim.tbl_extend('force', default_opts, global_opts, module_opts)
 end
 
-local function create_arguments(options)
+local function create_arguments(palette, options)
     local s = {}
     for _, v in pairs(style_names) do
         s[v] = v
@@ -79,15 +78,15 @@ local function create_arguments(options)
         italic = (options.italic == true or options.italic == nil) and s.italic or s.none,
         comments = options.italic_comments and s.italic or s.none,
     }
-    palette = load_palette(options)
 
     return { palette, s, cs, options }
 end
 
 local function initialize(config)
     local options = create_options(config)
-    local arguments = create_arguments(options)
-    local groups = load_colors()
+    local palette = load_palette(options)
+    local arguments = create_arguments(palette, options)
+    local groups = load_colors(palette)
 
     if type(options.custom_colors) == 'function' then
         table.insert(groups, options.custom_colors)
@@ -148,6 +147,8 @@ function M.destroy()
 end
 
 function M.colorscheme(config)
+    local options = create_options(config)
+    local palette = load_palette(options)
     vim.o.termguicolors = true
     vim.g.colors_name = 'labcoat'
     vim.g.terminal_color_0 = palette.black
