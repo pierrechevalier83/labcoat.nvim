@@ -37,6 +37,11 @@ return function(options)
     local bright_black
     local white
     local bright_white
+    -- accents
+    local primary_accent
+    local primary_bright_accent
+    local secondary_accent
+    local secondary_bright_accent
     -- Base configuration
     if options.dark_theme == true or options.dark_theme == nil then
         if options.high_contrast == true or options.high_contrast == nil then
@@ -80,10 +85,37 @@ return function(options)
         bright_white = base1
     end
     -- Accent configuration
-    local primary_accent = options.primary_accent or cyan
-    local primary_bright_accent = options.primary_bright_accent or bright_cyan
-    local secondary_accent = options.secondary_accent or blue
-    local secondary_bright_accent = options.secondary_bright_accent or bright_blue
+    if options.primary_accent == 'blue' then
+        primary_accent = blue
+        primary_bright_accent = bright_blue
+    elseif options.primary_accent == 'violet' then
+        primary_accent = violet
+        primary_bright_accent = bright_violet
+    elseif options.primary_accent == 'magenta' then
+        primary_accent = magenta
+        primary_bright_accent = bright_magenta
+    elseif options.primary_accent == 'red' then
+        primary_accent = red
+        primary_bright_accent = bright_red
+    elseif options.primary_accent == 'orange' then
+        primary_accent = orange
+        primary_bright_accent = bright_orange
+    elseif options.primary_accent == 'yellow' then
+        primary_accent = yellow
+        primary_bright_accent = bright_yellow
+    elseif options.primary_accent == 'green' then
+        primary_accent = green
+        primary_bright_accent = bright_green
+    elseif options.primary_accent == 'cyan' then
+        primary_accent = cyan
+        primary_bright_accent = bright_cyan
+    else
+        primary_accent = cyan
+        primary_bright_accent = bright_cyan
+    end
+    -- TODO
+    secondary_accent = blue
+    secondary_bright_accent = bright_blue
     return {
         -- colors
         blue = blue,
